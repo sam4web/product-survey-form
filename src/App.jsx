@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <div className='container'>
-        <Form displayInformation={displayInformation} />
+        <Form sendInfo={displayInformation} />
       </div>
     </>
   );

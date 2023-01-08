@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Form = ({ displayInformation }) => {
+const Form = ({ sendInfo }) => {
   const [customerInfo, setCustomerInfo] = useState({
     firstName: '',
     lastName: '',
@@ -27,27 +27,27 @@ const Form = ({ displayInformation }) => {
   const handleChange = (event) => {
     const { name, value, className } = event.target;
     switch (className) {
+      // customerInfo
       case 'customerInfo':
         setCustomerInfo((prevCustomerInfo) => ({
           ...prevCustomerInfo,
           [name]: value,
         }));
         break;
-      // customerInfo
+      // customerAddress
       case 'customerAddress':
         setCustomerAddress((prevCustomerAddress) => ({
           ...prevCustomerAddress,
           [name]: value,
         }));
         break;
-      // customerAddress
+      // customerOpinion
       case 'customerOpinion':
         setCustomerOpinion((prevcustomerOpinion) => ({
           ...prevcustomerOpinion,
           [name]: value,
         }));
         break;
-      // customerOpinion
     }
   };
 
@@ -58,7 +58,7 @@ const Form = ({ displayInformation }) => {
       ...customerAddress,
       ...customerOpinion,
     };
-    displayInformation(customerData);
+    sendInfo(customerData);
   };
 
   return (
