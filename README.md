@@ -4,14 +4,18 @@
 
 #### To run the program
 
-- ##### Clone the repository.
+- #### Clone the repository.
 
-  `git clone https://github.com/sam4web/product-survey-form.git`
+  ```console
+  git clone <this-repo>
+  ```
 
-- ##### install dependencies from 'package.json' file.
-  `cd product-survey-form`
-  `npm install`
-- ##### Runs the app in the development mode.
+- #### install dependencies from 'package.json' file.
+  ```console
+  cd product-survey-form
+  npm install
+  ```
+- #### Run the app in the development mode.
 
   `npm run dev`
 
